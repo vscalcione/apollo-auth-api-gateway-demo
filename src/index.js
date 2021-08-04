@@ -39,7 +39,7 @@ const createApolloGateway = async () => {
         })],
         context: ({ req }) => {
             const user = req.user || null;
-            console.log(user);
+            console.log('User: ', user);
             return { user };
         }
     });
