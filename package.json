@@ -1,0 +1,31 @@
+{
+  "name": "apollo-auth-api-gateway-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "concurrently -k npm:server:*",
+    "server:accounts": "nodemon ./accounts/index.js",
+    "server:gateway": "wait-on tcp:4001 && nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.28.0",
+    "@apollo/gateway": "^0.36.0",
+    "apollo-server": "^3.1.2",
+    "apollo-server-core": "^3.1.2",
+    "apollo-server-express": "^3.1.2",
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "graphql": "^15.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.12",
+    "wait-on": "^6.0.0"
+  },
+  "_id": "apollo-auth-api-gateway-demo@1.0.0"
+}
